@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lena Włodarska</title>
+  <meta name="description" content="Portfolio of Lena Włodarska: painting, graphic design, about the artist, contact.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #fefef1;
+      --ink:   #1b150d;
+      --label: #33190c;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      background: var(--paper);
+    }
+    body { overflow-x: hidden; }
+
+    .stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1077 / 753;
+    }
+
+    .title {
+      position: absolute;
+      left: 9.84%;
+      top: 13.68%;
+      width: 80.22%;
+      margin: 0;
+    }
+    .title img { display: block; width: 100%; height: auto; }
+
+    .item {
+      position: absolute;
+      display: block;
+      color: var(--label);
+      text-decoration: none;
+    }
+    .item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .item:focus-visible { outline: 3px solid var(--label); outline-offset: 6px; border-radius: 4px; }
+
+    /* Positions matched to the reference layout image. */
+    .painting { left: 5.76%;  top: 59.89%; width: 20.89%; }
+    .graphic  { left: 29.80%; top: 59.49%; width: 16.16%; }
+    .about    { left: 59.43%; top: 51.93%; width: 12.26%; }
+    .contact  { left: 75.67%; top: 61.49%; width: 21.26%; }
+
+    @media (max-width: 760px) {
+      .stage {
+        aspect-ratio: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem 1rem 4rem;
+      }
+      .title, .item { position: static; }
+      .title { width: 100%; }
+
+      .item { width: var(--w); }
+      .painting, .graphic, .about, .contact { left: auto; top: auto; }
+      .painting { --w: min(80vw, 344px); }
+      .graphic  { --w: min(70vw, 266px); }
+      .about    { --w: min(50vw, 202px); }
+      .contact  { --w: min(80vw, 350px); }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+
+    <h1 class="title">
+      <img src="images/computer_header.png" alt="Lena Włodarska">
+    </h1>
+
+    <a class="item painting" href="painting.html">
+      <img src="images/painting.png" alt="Painting">
+    </a>
+
+    <a class="item graphic" href="graphic-design.html">
+      <img src="images/graphic_design.png" alt="Graphic design">
+    </a>
+
+    <a class="item about" href="about.html">
+      <img src="images/about_the_artist.png" alt="About the artist">
+    </a>
+
+    <a class="item contact" href="contact.html">
+      <img src="images/contact_information.png" alt="Contact information">
+    </a>
+
+  </main>
+</body>
+</html>
