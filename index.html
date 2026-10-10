@@ -28,14 +28,14 @@
     .stage {
       position: relative;
       width: 100%;
-      aspect-ratio: 1919 / 943;   /* same proportions as your Squarespace design */
+      aspect-ratio: 1919 / 943;  
     }
 
     .title {
       position: absolute;
-      left: 12.09%;
-      top: 5.83%;
-      width: 75.04%;
+      left: 9.69%;
+      top: 13.57%;
+      width: 80.62%;
       margin: 0;
     }
     .title img { display: block; width: 100%; height: auto; }
@@ -54,12 +54,11 @@
 
     .item:focus-visible { outline: 3px solid var(--label); outline-offset: 6px; border-radius: 4px; }
 
-
-    .painting { left: 9.90%;  top: 47.08%; width: 18.24%; --lx: 55.1%; --ly: 94.8%; }
-    .graphic  { left: 32.72%; top: 43.69%; width: 15.11%; --lx: 49.7%; --ly: 97.4%; }
-    .about    { left: 62.12%; top: 27.36%; width: 10.84%; --lx: 48.1%; --ly: 98.8%; }
-    .contact  { left: 74.93%; top: 46.24%; width: 18.34%; --lx: 47.7%; --ly: 99.6%; }
-
+ 
+    .painting { left: 5.78%;  top: 60.13%; width: 15.63%; }
+    .graphic  { left: 29.55%; top: 60.87%; width: 8.55%; }
+    .about    { left: 59.46%; top: 52.39%; width: 6.31%; }
+    .contact  { left: 75.72%; top: 61.72%; width: 10.42%; }
 
     @media (max-width: 760px) {
       .stage {
@@ -77,34 +76,4 @@
       .painting, .graphic, .about, .contact { left: auto; top: auto; }
       .painting { --w: min(82vw, 380px); }
       .graphic  { --w: min(74vw, 340px); }
-      .about    { --w: min(50vw, 230px); }
-      .contact  { --w: min(76vw, 350px); }
-    }
-  </style>
-</head>
-<body>
-  <main class="stage">
-
-    <h1 class="title">
-      <img src="images/computer header.png" alt="Lena Włodarska">
-    </h1>
-
-    <a class="item painting" href="painting.html">
-      <img src="images/painting.png" alt="">
-    </a>
-
-    <a class="item graphic" href="graphic-design.html">
-      <img src="images/graphic design.png" alt="">
-    </a>
-
-    <a class="item about" href="about.html">
-      <img src="images/about the artist.png" alt="">
-    </a>
-
-    <a class="item contact" href="contact.html">
-      <img src="images/contact information.png" alt="">
-    </a>
-
-  </main>
-</body>
-</html>
+      .about    { --w: min(50vw, 230px
