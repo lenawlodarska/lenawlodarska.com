@@ -31,12 +31,11 @@
     }
     body { overflow-x: hidden; }
 
-    /* PRZYCISK GO BACK — przypięty do lewego górnego rogu okna przeglądarki z odstępem */
     .goback {
       position: fixed;
-      left: 20px;       /* Odstęp od lewej krawędzi okna */
-      top: 20px;        /* Odstęp od górnej krawędzi okna */
-      width: 180px;     /* Stała, odpowiednia szerokość przycisku */
+      left: 20px;       
+      top: 20px;        
+      width: 180px;     
       display: block;
       z-index: 100;
     }
@@ -50,7 +49,7 @@
       outline-offset: 4px;
     }
 
-    /* KONTENER GŁÓWNY (treść wyśrodkowana na stronie) */
+   
     .stage {
       position: relative;
       width: 100%;
@@ -112,7 +111,7 @@
         position: absolute;
         left: 15px;
         top: 15px;
-        width: min(45vw, 160px);
+        width: min(90vw, 320px);
       }
       .content {
         position: static;
@@ -128,7 +127,7 @@
 </head>
 <body>
 
-  <!-- Przycisk umieszczony poza .stage, by nie opierał się na wyśrodkowanym kontenerze -->
+
   <a class="goback" href="index.html" aria-label="Go back to the main site">
     <img src="images/go back sighn.jpeg" alt="Go back">
   </a>
