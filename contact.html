@@ -31,24 +31,8 @@
     }
     body { overflow-x: hidden; }
 
-    .stage {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1077 / 752;
-      margin: 0 auto;
-      container-type: inline-size;
-    }
-
-    @media (min-width: 761px) {
-      html, body { height: 100%; overflow: hidden; }
-      .stage {
-        width: 100%;
-        height: 100vh;
-      }
-    }
-
     .goback {
-      position: fixed;
+      position: absolute;
       left: 0;
       top: 0;
       width: 19.22%;
@@ -59,11 +43,19 @@
     .goback img { display: block; width: 100%; height: auto; }
     .goback:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
+    .stage {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1rem;
+      container-type: inline-size;
+    }
+
     .content {
-      position: absolute;
-      left: 50%;
-      top: 18.3%;
-      transform: translateX(-50%);
       width: 62%;
       text-align: center;
     }
@@ -95,13 +87,8 @@
     }
 
     @media (max-width: 760px) {
-      .stage {
-        aspect-ratio: auto;
-        display: block;
-        padding: 0 0 4rem;
-      }
-      .goback { position: absolute; width: min(55vw, 220px); }
-      .content { position: static; transform: none; margin-top: 100px; width: auto; padding: 0 1rem; }
+      .goback { width: min(55vw, 220px); }
+      .content { width: 90%; }
       .content h2 { font-size: 7.5vw; }
       .content p { font-size: 5vw; }
     }
@@ -113,7 +100,6 @@
   </a>
 
   <main class="stage">
-
     <div class="content">
       <h2>contact information:</h2>
       <p>
@@ -121,7 +107,6 @@
         email: <a href="mailto:lena1wlodarska@gmail.com">lena1wlodarska@gmail.com</a>
       </p>
     </div>
-
   </main>
 </body>
 </html>
