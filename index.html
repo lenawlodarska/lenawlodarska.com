@@ -28,7 +28,7 @@
     .stage {
       position: relative;
       width: 100%;
-      aspect-ratio: 1919 / 943;  
+      aspect-ratio: 1919 / 943;   
     }
 
     .title {
@@ -54,7 +54,6 @@
 
     .item:focus-visible { outline: 3px solid var(--label); outline-offset: 6px; border-radius: 4px; }
 
- 
     .painting { left: 5.78%;  top: 60.13%; width: 15.63%; }
     .graphic  { left: 29.55%; top: 60.87%; width: 8.55%; }
     .about    { left: 59.46%; top: 52.39%; width: 6.31%; }
@@ -76,4 +75,34 @@
       .painting, .graphic, .about, .contact { left: auto; top: auto; }
       .painting { --w: min(82vw, 380px); }
       .graphic  { --w: min(74vw, 340px); }
-      .about    { --w: min(50vw, 230px
+      .about    { --w: min(50vw, 230px); }
+      .contact  { --w: min(76vw, 350px); }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+
+    <h1 class="title">
+      <img src="images/computer_header.png" alt="Lena Włodarska">
+    </h1>
+
+    <a class="item painting" href="painting.html">
+      <img src="images/painting.png" alt="painting">
+    </a>
+
+    <a class="item graphic" href="graphic-design.html">
+      <img src="images/graphic_design.png" alt="graphic design">
+    </a>
+
+    <a class="item about" href="about.html">
+      <img src="images/about_the_artist.png" alt="about the artist">
+    </a>
+
+    <a class="item contact" href="contact.html">
+      <img src="images/contact_information.png" alt="contact information">
+    </a>
+
+  </main>
+</body>
+</html>
