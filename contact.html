@@ -31,6 +31,26 @@
     }
     body { overflow-x: hidden; }
 
+    /* PRZYCISK GO BACK — przypięty do lewego górnego rogu okna przeglądarki z odstępem */
+    .goback {
+      position: fixed;
+      left: 20px;       /* Odstęp od lewej krawędzi okna */
+      top: 20px;        /* Odstęp od górnej krawędzi okna */
+      width: 180px;     /* Stała, odpowiednia szerokość przycisku */
+      display: block;
+      z-index: 100;
+    }
+    .goback img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .goback:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+    }
+
+    /* KONTENER GŁÓWNY (treść wyśrodkowana na stronie) */
     .stage {
       position: relative;
       width: 100%;
@@ -46,16 +66,6 @@
         height: min(100vh, 100vw * (752 / 1077));
       }
     }
-
-    .goback {
-      position: absolute;
-      left: 1.8%;
-      top: 1.8%;
-      width: 19.22%;
-      display: block;
-    }
-    .goback img { display: block; width: 100%; height: auto; }
-    .goback:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
     .content {
       position: absolute;
@@ -98,20 +108,32 @@
         display: block;
         padding: 0 0 4rem;
       }
-      .goback { position: absolute; left: 1rem; top: 1rem; width: min(55vw, 220px); }
-      .content { position: static; transform: none; margin-top: 100px; width: auto; padding: 0 1rem; }
+      .goback {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        width: min(45vw, 160px);
+      }
+      .content {
+        position: static;
+        transform: none;
+        margin-top: 100px;
+        width: auto;
+        padding: 0 1rem;
+      }
       .content h2 { font-size: 7.5vw; }
       .content p { font-size: 5vw; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Przycisk umieszczony poza .stage, by nie opierał się na wyśrodkowanym kontenerze -->
+  <a class="goback" href="index.html" aria-label="Go back to the main site">
+    <img src="images/go back sighn.jpeg" alt="Go back">
+  </a>
+
   <main class="stage">
-
-    <a class="goback" href="index.html" aria-label="Go back to the main site">
-      <img src="images/go back sighn.jpeg" alt="Go back">
-    </a>
-
     <div class="content">
       <h2>contact information:</h2>
       <p>
@@ -119,7 +141,7 @@
         email: <a href="mailto:lena1wlodarska@gmail.com">lena1wlodarska@gmail.com</a>
       </p>
     </div>
-
   </main>
+
 </body>
 </html>
